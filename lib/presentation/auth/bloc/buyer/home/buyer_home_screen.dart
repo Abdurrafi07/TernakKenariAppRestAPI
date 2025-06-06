@@ -16,10 +16,16 @@ class _BuyerHomeScreenState extends State<BuyerHomeScreen> {
     super.initState();
     context.read<GetBurungTersediaBloc>().add(GetAllBurungTersediaEvent());
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text("Home Screen"),
+        centerTitle: true,
+        backgroundColor: Colors.black,
+      ),
     );
   }
 }
