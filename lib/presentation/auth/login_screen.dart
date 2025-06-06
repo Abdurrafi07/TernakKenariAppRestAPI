@@ -14,6 +14,22 @@ class _LoginScreenState extends State<LoginScreen> {
   bool isShowPassword = false;
 
   @override
+  void initState() {
+    emailController = TextEditingController();
+    passwordController = TextEditingController();
+    _key = GlobalKey<FormState>();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    _key.currentState?.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold();
   }
