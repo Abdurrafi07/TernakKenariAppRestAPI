@@ -72,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   validator: 'Password tidak boleh kosong',
                   controller: passwordController,
                   label: 'Password',
+                  obscureText: !isShowPassword,
                   prefixIcon: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(Icons.lock),
