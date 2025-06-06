@@ -1,4 +1,6 @@
+import 'package:canary_template/core/components/components.dart';
 import 'package:canary_template/core/components/spaces.dart';
+import 'package:canary_template/core/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -48,6 +50,31 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontSize: MediaQuery.of(context).size.width * 0.05,
                     fontWeight: FontWeight.bold,
                   ),
+                ),
+                const SpaceHeight(30),
+                CustomTextField(
+                  validator: 'Email tidak boleh kosong',
+                  controller: emailController,
+                  label: 'Email',
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(Icons.email),
+                  ),
+                ),
+                CustomTextField(
+                  validator: 'Password tidak boleh kosong',
+                  controller: passwordController,
+                  label: 'Password',
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(Icons.lock),
+                  ),
+                  suffixIcon: IconButton(onPressed: (){setState(() {
+                    isShowPassword = !isShowPassword;
+                  });}, icon: Icon(
+                    isShowPassword ? Icons.visibility : Icons.visibility_off,
+                    color: AppColors.grey,
+                  )),
                 ),
               ],
             ),
