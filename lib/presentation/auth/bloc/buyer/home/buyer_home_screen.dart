@@ -143,7 +143,7 @@ class _BuyerHomeScreenState extends State<BuyerHomeScreen> {
                         itemBuilder: (context, index) {
                           final burung = burungList[index];
 
-                          GestureDetector(
+                          return GestureDetector(
                             onTap: () {
                               showDialog(
                                 context: context,
