@@ -139,10 +139,123 @@ class _BuyerHomeScreenState extends State<BuyerHomeScreen> {
                               crossAxisSpacing: 10,
                               childAspectRatio: 0.8, // rasio aspek untuk kartu
                             ),
-                            
+
                         itemBuilder: (context, index) {
                           final burung = burungList[index];
 
+                          GestureDetector(
+                            onTap: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) {
+                                  //use ios dialog
+                                  return CupertinoAlertDialog(
+                                    title: Text("Detail Burung"),
+                                    content: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text("No Ring: ${burung.noRing}"),
+                                        Text("Usia: ${burung.usia}"),
+                                        Text(
+                                          "Jenis Kenari: ${burung.jenisKenari}",
+                                        ),
+                                        Text(
+                                          "Jenis Kelamin: ${burung.jenisKelamin}",
+                                        ),
+                                        Text("Harga: Rp${burung.harga}"),
+
+                                        // Tambahkan informasi lain yang diperlukan
+                                        Text(
+                                          "Deskripsi: ${burung.deskripsi.isNotEmpty ? burung.deskripsi : 'Tidak ada deskripsi'}",
+                                        ),
+                                      ],
+                                    ),
+                                    actions: [
+                                      CupertinoDialogAction(
+                                        child: const Text("Tutup"),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            child: Card(
+                              elevation: 4,
+                              color: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: const BorderRadius.vertical(
+                                      top: Radius.circular(12),
+                                    ),
+                                    child:
+                                        burung.image.isNotEmpty
+                                            ? Image.network(
+                                              burung.image,
+                                              height: 100,
+                                              width: double.infinity,
+                                              fit: BoxFit.fitHeight,
+                                            )
+                                            : Container(
+                                              height: 100,
+                                              width: double.infinity,
+                                              color: Colors.grey[300],
+                                              child: const Icon(
+                                                Icons.image_not_supported,
+                                              ),
+                                            ),
+                                  ),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            burung.noRing,
+                                            style: const TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Text(
+                                            "Jenis: ${burung.jenisKenari}",
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          Text(
+                                            "Kelamin: ${burung.jenisKelamin}",
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          Text(
+                                            "Harga: Rp${burung.harga}",
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          const SizedBox(height: 4),
+                                          Text(
+                                            "Status: ${burung.status}",
+                                            style: TextStyle(
+                                              color: Colors.green,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
                         },
                       );
                     }
