@@ -2,6 +2,7 @@ import 'package:canary_template/core/components/components.dart';
 import 'package:canary_template/core/constants/colors.dart';
 import 'package:canary_template/core/core.dart';
 import 'package:canary_template/data/model/request/auth/login_request_model.dart';
+import 'package:canary_template/presentation/auth/bloc/buyer/profile/buyer_profile_screen.dart';
 import 'package:canary_template/presentation/auth/bloc/login/login_bloc.dart';
 import 'package:canary_template/presentation/auth/bloc/login/login_event.dart';
 import 'package:canary_template/presentation/auth/bloc/login/login_state.dart';
@@ -108,10 +109,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text(state.responseModel.message!)),
                         );
-                        // context.pushAndRemoveUntil(
-                        //   const BuyerProfilScreen(),
-                        //   (route) => false,
-                        // );
+                        context.pushAndRemoveUntil(
+                          const BuyerProfileScreen(),
+                          (route) => false,
+                        );
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Role tidak dikenali')),
