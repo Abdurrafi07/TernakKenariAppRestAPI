@@ -8,6 +8,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  late final TextEditingController emailController;
+  late final TextEditingController passwordController;
+  late final GlobalKey<FormState> _key;
+  bool isShowPassword = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold();
