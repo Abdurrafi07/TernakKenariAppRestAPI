@@ -1,4 +1,4 @@
-# Login/Register Fail ㄨ dan Screen Lainnya Loading ↻ 
+# Login/Register Gagal ㄨ dan Screen Lainnya Loading Terus ↻ 
 # Preview Aplikasi
 # Login Screen
 
@@ -14,14 +14,15 @@
 
 # Register Screen
 
+![Screenshot_1749228122](https://github.com/user-attachments/assets/8a751d83-2532-478a-b325-30a7c154726d)
+
+![Screenshot_1749226676](https://github.com/user-attachments/assets/37512cfd-7975-4f93-8d3d-4c5e6f81fee4)
+
 ![Screenshot_1749226612](https://github.com/user-attachments/assets/bee14ab0-746c-4529-89eb-2025afca3585)
 
 ![Screenshot_1749226618](https://github.com/user-attachments/assets/1fdbd07c-2117-48d7-aca3-381f89d673dc)
 
 ![Screenshot_1749226633](https://github.com/user-attachments/assets/bc7992ae-c667-44a4-877c-dd87f4b320a0)
-
-![Screenshot_1749226676](https://github.com/user-attachments/assets/37512cfd-7975-4f93-8d3d-4c5e6f81fee4)
-
 
 # Home Screen
 
@@ -31,7 +32,7 @@
 
 # Profile Buyer Screen
 
-![Screenshot_1749226820](https://github.com/user-attachments/assets/0453290b-cc1d-4096-addb-379aae191bc8)
+![Screenshot_1749226896](https://github.com/user-attachments/assets/4dcf6ca1-34d7-43c6-aa8a-6d4d05f589ee)
 
 ![Screenshot_1749226901](https://github.com/user-attachments/assets/0fc4f42b-47a5-4950-a736-b45a7738016e)
 
